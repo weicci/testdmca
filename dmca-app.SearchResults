@@ -1,0 +1,34 @@
+---- <html lang Matches (1 in 1 files) ----
+App.blade.php (resources\views):<html lang="zh-TW">
+---- iconv Matches (27 in 11 files) ----
+AbstractCloner.php (vendor\symfony\var-dumper\symfony\component\vardumper\cloner):            if (!function_exists('iconv')) {
+AbstractDumper.php (vendor\symfony\var-dumper\symfony\component\vardumper\dumper):        } elseif (function_exists('iconv')) {
+AbstractDumper.php (vendor\symfony\var-dumper\symfony\component\vardumper\dumper):            iconv($charset, 'UTF-8', '');
+AbstractDumper.php (vendor\symfony\var-dumper\symfony\component\vardumper\dumper):                $this->charsetConverter = 'iconv';
+AbstractDumper.php (vendor\symfony\var-dumper\symfony\component\vardumper\dumper):        if ('iconv' === $this->charsetConverter) {
+AbstractDumper.php (vendor\symfony\var-dumper\symfony\component\vardumper\dumper):            $c = iconv($this->charset, 'UTF-8', $s);
+App.blade.php (resources\views):	$str = iconv("big5","UTF-8",$str); 
+CliDumper.php (vendor\symfony\var-dumper\symfony\component\vardumper\dumper):        if (function_exists('iconv')) {
+ExceptionHandler.php (vendor\symfony\debug\symfony\component\debug):        if (!preg_match('//u', $str) && function_exists('iconv')) {
+ExceptionHandler.php (vendor\symfony\debug\symfony\component\debug):            if ('UTF-8' === $charset || $str !== @iconv($charset, $charset, $str)) {
+ExceptionHandler.php (vendor\symfony\debug\symfony\component\debug):            $str = iconv($charset, 'UTF-8', $str);
+MimePart.php (vendor\swiftmailer\swiftmailer\lib\classes\swift\mime):            // mb_convert_encoding must be the first one to check, since iconv cannot convert some words.
+MimePart.php (vendor\swiftmailer\swiftmailer\lib\classes\swift\mime):            } elseif (function_exists('iconv')) {
+MimePart.php (vendor\swiftmailer\swiftmailer\lib\classes\swift\mime):                $string = iconv('utf-8//TRANSLIT//IGNORE', $charset, $string);
+MimePart.php (vendor\swiftmailer\swiftmailer\lib\classes\swift\mime):                throw new Swift_SwiftException('No suitable convert encoding function (use UTF-8 as your charset or install the mbstring or iconv extension).');
+NTLMAuthenticator.php (vendor\swiftmailer\swiftmailer\lib\classes\swift\transport\esmtp\auth):        return iconv('UTF-8', 'UTF-16LE', $input);
+NTLMAuthenticatorTest.php (vendor\swiftmailer\swiftmailer\tests\unit\swift\transport\esmtp\auth):        if (!function_exists('mcrypt_module_open') || !function_exists('openssl_random_pseudo_bytes') || !function_exists('bcmul') || !function_exists('iconv')) {
+ParserTest.php (vendor\symfony\yaml\symfony\component\yaml\tests):        if (!function_exists('iconv')) {
+ParserTest.php (vendor\symfony\yaml\symfony\component\yaml\tests):            $this->markTestSkipped('Exceptions for non-utf8 charsets require the iconv() function.');
+ParserTest.php (vendor\symfony\yaml\symfony\component\yaml\tests):            iconv('UTF-8', 'ISO-8859-1', "foo: 'äöüß'"),
+ParserTest.php (vendor\symfony\yaml\symfony\component\yaml\tests):            iconv('UTF-8', 'ISO-8859-15', "euro: '€'"),
+ParserTest.php (vendor\symfony\yaml\symfony\component\yaml\tests):            iconv('UTF-8', 'CP1252', "cp1252: '©ÉÇáñ'"),
+XliffFileLoader.php (vendor\symfony\translation\symfony\component\translation\loader):            if (function_exists('iconv')) {
+XliffFileLoader.php (vendor\symfony\translation\symfony\component\translation\loader):                return iconv('UTF-8', $encoding, $content);
+XliffFileLoader.php (vendor\symfony\translation\symfony\component\translation\loader):            throw new \RuntimeException('No suitable convert encoding function (use UTF-8 as your encoding or install the iconv or mbstring extension).');
+XliffFileLoaderTest.php (vendor\symfony\translation\symfony\component\translation\tests\loader):        if (!function_exists('iconv') && !function_exists('mb_convert_encoding')) {
+XliffFileLoaderTest.php (vendor\symfony\translation\symfony\component\translation\tests\loader):            $this->markTestSkipped('The iconv and mbstring extensions are not available.');
+---- homestead Matches (0 in 0 files) ----
+---- MCRYPT_RIJNDAEL_128 Matches (2 in 2 files) ----
+App.php (config):	'cipher' => MCRYPT_RIJNDAEL_128,
+Encrypter.php (vendor\laravel\framework\src\illuminate\encryption):	protected $cipher = MCRYPT_RIJNDAEL_128;
